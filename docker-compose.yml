@@ -14,7 +14,10 @@ services:
     restart: unless-stopped
     networks:
       - homepage_net
+      - ha_ha_net
 
 networks:
   homepage_net:
     driver: bridge
+  ha_ha_net:
+    external: true
