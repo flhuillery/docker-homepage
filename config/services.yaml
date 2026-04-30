@@ -4,9 +4,9 @@
 # Variables définies dans .env (préfixe HOMEPAGE_VAR_)
 
 # ═══════════════════════════════════════════════════
-#  AUTOMATISATION
+#  DOMOTIQUE
 # ═══════════════════════════════════════════════════
-- Automatisation:
+- Domotique:
 
     - Home Assistant:
         icon: home-assistant.png
@@ -42,6 +42,12 @@
         description: Passerelle Matter
         server: my-docker
         container: matterbridge
+
+    - MQTT (Mosquitto):
+        icon: mosquitto.png
+        description: Broker MQTT (port 1883)
+        server: my-docker
+        container: mqtt
 
 # ═══════════════════════════════════════════════════
 #  MÉDIAS
@@ -261,12 +267,6 @@
         description: Activation Windows/Office
         server: my-docker
         container: kms
-
-    - MQTT (Mosquitto):
-        icon: mosquitto.png
-        description: Broker MQTT (port 1883)
-        server: my-docker
-        container: mqtt
 
 # ═══════════════════════════════════════════════════
 #  MES APPLICATIONS

@@ -28,7 +28,7 @@ language: fr
 
 # Organisation des sections
 layout:
-  Automatisation:
+  Domotique:
     icon: mdi-home-automation
     style: row
     columns: 4
