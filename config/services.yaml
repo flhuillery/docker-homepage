@@ -1,0 +1,288 @@
+---
+# Services organisés par catégorie
+# https://gethomepage.dev/configs/services/
+# Variables définies dans .env (préfixe HOMEPAGE_VAR_)
+
+# ═══════════════════════════════════════════════════
+#  AUTOMATISATION
+# ═══════════════════════════════════════════════════
+- Automatisation:
+
+    - Home Assistant:
+        icon: home-assistant.png
+        href: http://192.168.1.31:8023
+        description: Domotique centrale
+        server: my-docker
+        container: homeassistant
+        widget:
+          type: homeassistant
+          url: http://192.168.1.31:8023
+          key: "{{HOMEPAGE_VAR_HASS_TOKEN}}"
+
+    - Zigbee2MQTT:
+        icon: zigbee2mqtt.png
+        href: http://192.168.1.31:7070
+        description: Passerelle Zigbee → MQTT
+        server: my-docker
+        container: zigbee2mqtt
+
+    - Frigate:
+        icon: frigate.png
+        href: http://192.168.1.31:5000
+        description: NVR & Détection IA
+        server: my-docker
+        container: frigate
+        widget:
+          type: frigate
+          url: http://192.168.1.31:5000
+
+    - Matterbridge:
+        icon: mdi-bridge
+        href: http://192.168.1.31:8283
+        description: Passerelle Matter
+        server: my-docker
+        container: matterbridge
+
+# ═══════════════════════════════════════════════════
+#  MÉDIAS
+# ═══════════════════════════════════════════════════
+- Médias:
+
+    - Jellyfin:
+        icon: jellyfin.png
+        href: http://192.168.1.31:8096
+        description: Serveur Multimédia
+        server: my-docker
+        container: jellyfin
+        widget:
+          type: jellyfin
+          url: http://192.168.1.31:8096
+          key: "{{HOMEPAGE_VAR_JELLYFIN_KEY}}"
+          enableBlocks: true
+          enableNowPlaying: true
+
+    - Sonarr:
+        icon: sonarr.png
+        href: http://192.168.1.31:8989
+        description: Gestionnaire de Séries
+        server: my-docker
+        container: sonarr
+        widget:
+          type: sonarr
+          url: http://192.168.1.31:8989
+          key: "{{HOMEPAGE_VAR_SONARR_KEY}}"
+          enableQueue: true
+
+    - Radarr:
+        icon: radarr.png
+        href: http://192.168.1.31:7880
+        description: Gestionnaire de Films
+        server: my-docker
+        container: radarr
+        widget:
+          type: radarr
+          url: http://192.168.1.31:7880
+          key: "{{HOMEPAGE_VAR_RADARR_KEY}}"
+          enableQueue: true
+
+    - Lidarr:
+        icon: lidarr.png
+        href: http://192.168.1.31:8686
+        description: Gestionnaire de Musique
+        widget:
+          type: lidarr
+          url: http://192.168.1.31:8686
+          key: "{{HOMEPAGE_VAR_LIDARR_KEY}}"
+          enableQueue: true
+
+    - Jackett:
+        icon: jackett.png
+        href: http://192.168.1.31:9117
+        description: Proxy d'indexeurs Torrent
+        server: my-docker
+        container: jackett
+        widget:
+          type: jackett
+          url: http://192.168.1.31:9117
+          key: "{{HOMEPAGE_VAR_JACKETT_KEY}}"
+
+    - Transmission:
+        icon: transmission.png
+        href: http://192.168.1.31:9095
+        description: Client Torrent (VPN)
+        server: my-docker
+        container: transmission
+        widget:
+          type: transmission
+          url: http://192.168.1.31:9095
+          username: "{{HOMEPAGE_VAR_TRANSMISSION_USER}}"
+          password: "{{HOMEPAGE_VAR_TRANSMISSION_PASS}}"
+
+# ═══════════════════════════════════════════════════
+#  CLOUD & PARTAGE
+# ═══════════════════════════════════════════════════
+- Cloud & Partage:
+
+    - Nextcloud:
+        icon: nextcloud.png
+        href: http://192.168.1.31/nextcloud
+        description: Cloud Personnel
+        server: my-docker
+        container: nextcloud-app
+        widget:
+          type: nextcloud
+          url: http://192.168.1.31/nextcloud
+          username: "{{HOMEPAGE_VAR_NEXTCLOUD_USER}}"
+          password: "{{HOMEPAGE_VAR_NEXTCLOUD_PASS}}"
+
+    - Immich:
+        icon: immich.png
+        href: http://192.168.1.31:2283
+        description: Galerie Photos & Vidéos
+        server: my-docker
+        container: immich_server
+        widget:
+          type: immich
+          url: http://192.168.1.31:2283
+          key: "{{HOMEPAGE_VAR_IMMICH_KEY}}"
+
+    - Pingvin Share:
+        icon: pingvin-share.png
+        href: http://192.168.1.31:3010
+        description: Partage de Fichiers
+        server: my-docker
+        container: pingvin
+
+# ═══════════════════════════════════════════════════
+#  MONITORING
+# ═══════════════════════════════════════════════════
+- Monitoring:
+
+    - Grafana:
+        icon: grafana.png
+        href: http://192.168.1.31:3000
+        description: Tableaux de Bord Métriques
+        server: my-docker
+        container: grafana
+        widget:
+          type: grafana
+          url: http://192.168.1.31:3000
+          username: "{{HOMEPAGE_VAR_GRAFANA_USER}}"
+          password: "{{HOMEPAGE_VAR_GRAFANA_PASS}}"
+
+    - Prometheus:
+        icon: prometheus.png
+        href: http://192.168.1.31:9090
+        description: Collecte de Métriques
+        server: my-docker
+        container: prometheus
+        widget:
+          type: prometheus
+          url: http://192.168.1.31:9090
+
+    - Portainer:
+        icon: portainer.png
+        href: http://192.168.1.31:9000
+        description: Gestion des Conteneurs
+        server: my-docker
+        container: 1970192ab053_portainer
+        widget:
+          type: portainer
+          url: http://192.168.1.31:9000
+          env: 1
+          key: "{{HOMEPAGE_VAR_PORTAINER_KEY}}"
+
+    - Dockhand:
+        icon: mdi-docker
+        href: http://192.168.1.31:3009
+        description: Mises à jour des Images
+        server: my-docker
+        container: dockhand
+
+    - cAdvisor:
+        icon: mdi-chart-box-outline
+        href: http://192.168.1.31:8080
+        description: Métriques des Conteneurs
+        server: my-docker
+        container: cadvisor
+
+# ═══════════════════════════════════════════════════
+#  SÉCURITÉ & RÉSEAU
+# ═══════════════════════════════════════════════════
+- Sécurité & Réseau:
+
+    - Vaultwarden:
+        icon: vaultwarden.png
+        href: http://192.168.1.31/vault
+        description: Gestionnaire de Mots de Passe
+        server: my-docker
+        container: vaultwarden
+
+    - Nginx Proxy Manager:
+        icon: nginx-proxy-manager.png
+        href: http://192.168.1.31:82
+        description: Reverse Proxy & SSL
+        server: my-docker
+        container: nginx_reverse
+        widget:
+          type: npm
+          url: http://192.168.1.31:82
+          username: admin@example.com
+          password: your_npm_password
+
+    - Fail2ban:
+        icon: mdi-shield-alert
+        description: Protection Brute-Force
+        server: my-docker
+        container: fail2ban
+
+# ═══════════════════════════════════════════════════
+#  OUTILS
+# ═══════════════════════════════════════════════════
+- Outils:
+
+    - IT Tools:
+        icon: it-tools.png
+        href: http://192.168.1.31:7474
+        description: Boîte à Outils Dev/Admin
+        server: my-docker
+        container: it-tools
+
+    - phpMyAdmin:
+        icon: phpmyadmin.png
+        href: http://192.168.1.31:8082
+        description: Administration MySQL
+        server: my-docker
+        container: wordpress_phpmyadmin
+
+    - KMS Server:
+        icon: mdi-key-variant
+        href: http://192.168.1.31:1688
+        description: Activation Windows/Office
+        server: my-docker
+        container: kms
+
+    - MQTT (Mosquitto):
+        icon: mosquitto.png
+        description: Broker MQTT (port 1883)
+        server: my-docker
+        container: mqtt
+
+# ═══════════════════════════════════════════════════
+#  MES APPLICATIONS
+# ═══════════════════════════════════════════════════
+- Mes Applications:
+
+    - MuscuApp:
+        icon: mdi-dumbbell
+        href: http://192.168.1.31:3080
+        description: Application Musculation
+        server: my-docker
+        container: muscuapp-frontend
+
+    - WordPress:
+        icon: wordpress.png
+        href: http://192.168.1.31:3001
+        description: Site WordPress
+        server: my-docker
+        container: wordpress_site

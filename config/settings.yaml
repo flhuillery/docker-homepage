@@ -1,0 +1,64 @@
+---
+# Paramètres généraux de Homepage
+# https://gethomepage.dev/configs/settings/
+
+title: Serveur Home
+description: Dashboard — 192.168.1.31
+favicon: https://raw.githubusercontent.com/gethomepage/homepage/main/public/android-chrome-192x192.png
+
+theme: dark
+color: slate
+
+headerStyle: boxed
+cardBlur: sm
+
+# Affichage des icônes de statut des conteneurs Docker
+showStats: true
+
+# Langue de l'interface
+language: fr
+
+# Fond d'écran (optionnel — commenter pour désactiver)
+# background:
+#   image: https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920
+#   blur: sm
+#   saturate: 50
+#   brightness: 50
+#   opacity: 50
+
+# Organisation des sections
+layout:
+  Automatisation:
+    icon: mdi-home-automation
+    style: row
+    columns: 4
+
+  Médias:
+    icon: mdi-play-circle-outline
+    style: row
+    columns: 4
+
+  Cloud & Partage:
+    icon: mdi-cloud-outline
+    style: row
+    columns: 4
+
+  Monitoring:
+    icon: mdi-chart-line
+    style: row
+    columns: 4
+
+  Sécurité & Réseau:
+    icon: mdi-shield-lock-outline
+    style: row
+    columns: 4
+
+  Outils:
+    icon: mdi-tools
+    style: row
+    columns: 4
+
+  Mes Applications:
+    icon: mdi-application-outline
+    style: row
+    columns: 4

@@ -1,0 +1,15 @@
+# Secrets — ne jamais versionner
+.env
+
+# Fichiers générés par l'éditeur
+.DS_Store
+*.swp
+*.swo
+*~
+Thumbs.db
+
+# Logs
+*.log
+
+# Répertoires de données runtime (montés par Docker)
+config/logs/

@@ -1,0 +1,31 @@
+---
+# Widgets de la barre supérieure
+# https://gethomepage.dev/configs/widgets/
+
+- logo:
+    icon: https://raw.githubusercontent.com/gethomepage/homepage/main/public/android-chrome-192x192.png
+
+- greeting:
+    text_size: xl
+    text: Bienvenue sur le Serveur Home 🏠
+
+- datetime:
+    text_size: xl
+    format:
+      timeStyle: short
+      dateStyle: short
+      hourCycle: h23
+
+- resources:
+    cpu: true
+    memory: true
+    disk: /
+    uptime: true
+    units: metric
+    refresh: 3000
+    label: Système
+
+- search:
+    provider: google
+    target: _blank
+    focus: false

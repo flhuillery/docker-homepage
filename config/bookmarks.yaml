@@ -1,0 +1,25 @@
+---
+# Marque-pages rapides
+# https://gethomepage.dev/configs/bookmarks/
+
+- Documentation:
+    - Homepage Docs:
+        - icon: si-readthedocs
+          href: https://gethomepage.dev
+    - Docker Hub:
+        - icon: si-docker
+          href: https://hub.docker.com
+    - GitHub:
+        - icon: si-github
+          href: https://github.com
+
+- Administration Serveur:
+    - Portainer:
+        - icon: portainer.png
+          href: http://192.168.1.31:9000
+    - Nginx Proxy Manager:
+        - icon: nginx-proxy-manager.png
+          href: http://192.168.1.31:82
+    - Grafana:
+        - icon: grafana.png
+          href: http://192.168.1.31:3000

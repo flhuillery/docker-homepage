@@ -1,0 +1,19 @@
+/* Homepage — Personnalisation CSS */
+
+/* Arrondi des cartes */
+.card {
+  border-radius: 12px !important;
+}
+
+/* Légère transparence des cartes */
+#information-widgets .card,
+#services .card {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(4px);
+}
+
+/* Couleur d'accent sur les titres de groupes */
+#services h2 {
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}

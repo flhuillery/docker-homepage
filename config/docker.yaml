@@ -1,0 +1,6 @@
+---
+# Intégration Docker — permet d'afficher le statut des conteneurs
+# https://gethomepage.dev/configs/docker/
+
+my-docker:
+  socket: /var/run/docker.sock
