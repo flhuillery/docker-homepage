@@ -76,6 +76,7 @@
           type: immich
           url: http://192.168.1.31:2283
           key: "{{HOMEPAGE_VAR_IMMICH_KEY}}"
+          version: 2
 
     - Pingvin Share:
         icon: pingvin-share.png
