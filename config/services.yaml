@@ -159,8 +159,8 @@
         widget:
           type: npm
           url: http://192.168.1.31:82
-          username: admin@example.com
-          password: your_npm_password
+          username: "{{HOMEPAGE_VAR_NPM_USER}}"
+          password: "{{HOMEPAGE_VAR_NPM_PASS}}"
 
     - Fail2ban:
         icon: mdi-shield-alert
